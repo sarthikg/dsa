@@ -32,3 +32,34 @@ function productExceptSelf(nums: number[]): number[] {
   // Return the result
   return result;
 }
+
+function productExceptSelfOptimised(nums: number[]): number[] {
+  // Create an array to store the product of values to the right of current value
+  const rightProduct: number[] = [];
+
+  // Loop over the array to calculate the rightProducts
+  for (let i = 0; i < nums.length; i++) {
+    // Add to right array
+    const value = nums[nums.length - 1 - i];
+    const lastValue =
+      rightProduct.at(-1) === undefined ? 1 : rightProduct.at(-1);
+    rightProduct.push(lastValue * value);
+  }
+  // Reverse the right array, as we were initially adding numbers in opposite way
+  rightProduct.reverse();
+
+  // Create a result array to be returned
+  const result: number[] = [];
+  // Create a variable that stores the product of the left-side
+  let product: number = 1;
+  // Loop over the values, and add the product to the resultant array
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i];
+    const rightProductVal =
+      rightProduct.at(i + 1) === undefined ? 1 : rightProduct.at(i + 1);
+    result.push(product * rightProductVal);
+    product *= value;
+  }
+  // Return the result
+  return result;
+}
