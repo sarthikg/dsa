@@ -3,10 +3,10 @@ declare type Point = {
   y: number;
 };
 
-declare type ListNode<T> = {
+declare type ListNodeType<T> = {
   value: T;
-  next: ListNode<T> | null;
-  prev: ListNode<T> | null;
+  next?: ListNodeType<T>;
+  prev?: ListNodeType<T>;
 };
 
 declare interface List<T> {
