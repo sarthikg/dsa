@@ -12,13 +12,13 @@ class TreeNode {
   }
 }
 
-export function inorderTraversal(root: TreeNode | null): number[] {
-  const result: number[] = [];
+export function preorderTraversal(root: TreeNode | null): number[] {
+  let result: number[] = [];
 
   function recurse(node: TreeNode | null) {
     if (node) {
-      recurse(node.left);
       result.push(node.val);
+      recurse(node.left);
       recurse(node.right);
     }
   }
