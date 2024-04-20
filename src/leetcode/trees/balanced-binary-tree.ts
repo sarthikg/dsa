@@ -12,7 +12,7 @@ class TreeNode {
   }
 }
 
-function isBalanced(root: TreeNode | null): boolean {
+export function isBalanced(root: TreeNode | null): boolean {
   // Create a variable which tracks if the tree is imbalanced
   let isBalanced = true;
   // Function to recursively check every node for being balanced
