@@ -7,6 +7,7 @@
 
 - Base case involves handling of the smallest sub-problem which can be easily handled.
 - There should be a way of dividing a problem into sub-problems, as well as combining the results of the sub-problem into a solution.
+- These problems usually involve a recursive solution, i.e. breaking into sub-problems till they cannot be broken down any further.
 
 #### Algorithms
 
