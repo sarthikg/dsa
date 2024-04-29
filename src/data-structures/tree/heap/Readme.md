@@ -31,3 +31,18 @@
 - Once the element is added, depending on if the heap is a min-heap or a max-heap, the element will have to be re-adjusted to its correct position.
 - For this, we recursively check the immediate children of the current element, i.e. `n*2` & `(n*2)+1` elements. If the max of these elements is greater than the current element, we swap these elements. (incase of max-heap)
 - In the worst-case, this will require `O(logn)` comparisons, where `n` is the elements in the tree, & `logn` is the height of the tree.
+
+### Heap Sort
+
+- Incase of deletion from heap, in the array representation of heap, the last index of the array is emptied out with every heap deletion.
+- Since the element that is deleted is always the root element of the heap, the resultant values from multiple delete operations are values in sorted order.
+- With every delete operation, we can utilise the newly created empty space at the end of the array, and store the deleted value there.
+- After `n` operations of deletion, the resultant array will have all the values sorted.
+- Technically, we perform `n` delete operations, and each delete operation has a time-complexity of `O(logn)`, hence the total time-complexity of heap-sort is `O(nlogn)`.
+
+### Priority Queues
+
+- Typical queues allow for FIFO operations, but incase we have to assign a weight/priority to each value in the queue, that is not possible in a typical queue.
+- For this, we use a heap. Incase values with higher priority have to be fetched first, we use a max-heap, and incase the values with lower-priority have to be fetched first, we use a min-heap.
+- Adding a new value to the priority queue is similar to an insert operation, hence takes `O(logn)` time.
+- Removing a value from the priority queue is similar to a delete operation, hence takes `O(logn)` time as well.
