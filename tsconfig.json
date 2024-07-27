@@ -1,25 +1,31 @@
 {
-    "compilerOptions": {
-        "outDir": "dist",
-        "allowJs": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "resolveJsonModule": true,
-        "noImplicitReturns": true,
-        "esModuleInterop": true,
-        "target": "esnext",
-        "module": "commonjs",
-        "baseUrl": "src",
-        "paths": {
-            "@code/*": [
-                "day1/*"
-            ]
-        }
-    },
-    "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "outDir": "dist",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "baseUrl": "src",
+    "paths": {
+      "@code/*": ["day1/*"]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "leetcode/word-search.ts",
+    "neetcode/two-pointers",
+    "neetcode/stack",
+    "neetcode/sliding-window",
+    "neetcode/binary-search",
+    "neetcode/tries",
+    "neetcode/trees",
+    "neetcode/linked-list",
+    "neetcode/backtracking",
+    "neetcode/arrays-and-hashing"
+  ],
+  "exclude": ["node_modules"]
 }
