@@ -1,4 +1,5 @@
 export function frequencySort(nums: number[]): number[] {
+  // Create a freqency map (value -> freq)
   const freqMap = {};
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
@@ -8,6 +9,7 @@ export function frequencySort(nums: number[]): number[] {
     freqMap[num] += 1;
   }
 
+  // Create an array where index corresponds to the frequency & the value is the array of numbers with that frequency
   const freqArr: number[][] = [];
   const keys = Object.keys(freqMap);
   for (let i = 0; i < keys.length; i++) {
@@ -18,6 +20,7 @@ export function frequencySort(nums: number[]): number[] {
     freqArr[value] = [...freqArr[value], parseInt(key)];
   }
 
+  // Loop over the freqArr and add the numbers in the result array
   const result: number[] = [];
   for (let i = 0; i < freqArr.length; i++) {
     const arr = freqArr[i];
