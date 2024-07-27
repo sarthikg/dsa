@@ -1,4 +1,4 @@
-function threeSum(nums: number[]): number[][] {
+export function threeSum(nums: number[]): number[][] {
   // Sort the numbers to ease the logic for excluding duplicate arrays in result
   nums.sort((a, b) => a - b);
   // Pointer for the first number

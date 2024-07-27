@@ -10,7 +10,7 @@ function longestConsecutive(nums: number[]): number {
   // Loop over each key in the set
   for (let key in seen) {
     let currValue = parseInt(key);
-    // If the key is not s start of the sequence, i.e. if a number 1 less than the current key
+    // If the key is not a start of the sequence, i.e. if a number 1 less than the current key
     // exists in the set, we ignore that case, and continue the loop
     if (seen[currValue - 1]) {
       continue;

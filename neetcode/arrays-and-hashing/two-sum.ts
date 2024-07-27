@@ -1,4 +1,4 @@
-function twoSum(nums: number[], target: number): number[] {
+export function twoSum(nums: number[], target: number): number[] {
   // Object to store the positions of the seen elements
   const position: Record<number, number> = {};
 
